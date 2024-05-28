@@ -1,0 +1,25 @@
+# ===============================
+# General
+# ===============================
+server:
+  port: 8080
+  error.include-message: always
+spring:
+  application.name: notification-api
+  main.web-application-type: REACTIVE
+  profiles.active: local
+  jackson:
+    serialization.WRITE_DATES_AS_TIMESTAMPS: false
+    deserialization.fail-on-unknown-properties: false
+    default-property-inclusion: NON_ABSENT
+
+  data:
+    mongodb:
+      host: mongo_db
+      port: 27017
+      database: notificationdb
+      username: myUserAdmin
+      password: 1qaz2wsx
+      uri: mongodb://mongo_db:27017/notificationdb
+      authentication-database: admin
+      auto-index-creation: true
